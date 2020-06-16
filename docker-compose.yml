@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-    poppi:
+    fun-stuff:
         image: natsuwumi/fun-stuff:latest
         ports:
           - 5001:5001
