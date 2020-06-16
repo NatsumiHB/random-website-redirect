@@ -1,7 +1,7 @@
 import random
 
 import waitress
-from flask import Flask, redirect, request
+from flask import Flask, redirect
 
 from urls import urls
 
@@ -15,10 +15,10 @@ def random_url():
 
 @app.route("/<url>", methods=["GET"])
 def chosen_url(url):
-    if url in urls:
+    try:
         return redirect(urls[url])
-    else:
-        return 404
+    except KeyError:
+        return "<!DOCTYPE html><html><body><h1>ERROR 404</h1><h2>The URL doesn't exist</h2></body></html>", 404
 
 
 waitress.serve(app, host="0.0.0.0", port=5001)
