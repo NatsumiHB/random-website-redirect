@@ -5,7 +5,6 @@ urls = {
     "rickroll": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "kittens": "https://explore.org/livecams/cats/kitten-rescue-cam",
     "100kstars": "https://stars.chromeexperiments.com/",
-    "worldlapse": "https://world.time.com/timelapse/",
     "peopleinspace": "https://www.howmanypeopleareinspacerightnow.com/",
     "radiogarden": "https://radio.garden/"
 }
