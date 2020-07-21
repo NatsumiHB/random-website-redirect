@@ -21,4 +21,9 @@ def chosen_url(url):
         return "<!DOCTYPE html><html><body><h1>ERROR 404</h1><h2>The URL doesn't exist</h2></body></html>", 404
 
 
+@app.route("/all_urls", methods=["GET"])
+def all_urls():
+    return urls
+
+
 waitress.serve(app, host="0.0.0.0", port=5001)
