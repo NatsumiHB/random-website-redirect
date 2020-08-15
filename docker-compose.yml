@@ -2,12 +2,16 @@ version: "3"
 
 services:
     web-server:
-        image: natsuwumi/fun-stuff:latest
+        image: fun-stuff:latest
         ports:
           - 5001:5001
-        networks:
-          - proxy_net
+        environment:
+          - RUST_LOG=info
+        volumes:
+          - ./urls.json:/srv/fun-stuff/urls.json
+        # networks:
+          # - bridge
 
-networks:
-  proxy_net:
-    external: true
+# networks:
+  # proxy_net:
+    # external: true
