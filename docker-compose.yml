@@ -2,7 +2,7 @@ version: "3"
 
 services:
     web-server:
-        image: natsuwumi/fun-stuff:latest
+        image: fun-stuff:latest
         ports:
           - 5001:5001
         environment:

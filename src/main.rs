@@ -30,7 +30,7 @@ async fn main() -> anyhow::Result<()> {
             .service(choose)
             .data(urls.clone())
     })
-        .bind("localhost:5001")?
+        .bind("0.0.0.0:5001")?
         .run()
         .await?;
 
