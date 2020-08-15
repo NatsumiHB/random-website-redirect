@@ -10,7 +10,7 @@ services:
         volumes:
           - ./urls.json:/srv/fun-stuff/urls.json
         networks:
-          - bridge
+          - proxy_net
 
 networks:
   proxy_net:
