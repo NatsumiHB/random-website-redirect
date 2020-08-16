@@ -2,6 +2,9 @@
 It's basically useless web but in cooler
 
 ## Usage
+Set the `RUST_LOG` environment variable to specify your
+[logging level](https://docs.rs/env_logger/0.7.1/env_logger/#enabling-logging).
+
 You can either use Rust by just running `cargo run` in the root of the repository.
 
 When using the `docker-compose` file you will need to create a network called `proxy_net`.
