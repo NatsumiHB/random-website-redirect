@@ -9,6 +9,8 @@ You can either use Rust by just running `cargo run` in the root of the repositor
 
 When using the `docker-compose` file you will need to create a network called `proxy_net`.
 
+The server runs on port 5001, you will need to public that port in the `docker-compose.yml` file.
+
 | Endpoint   | Result                             |
 | :--------: | :--------------------------------: |
 | /          | Redirect to a random fun website   |
