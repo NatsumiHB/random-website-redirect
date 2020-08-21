@@ -1,5 +1,5 @@
-on: [push]
 name: Run cargo check
+on: [push]
 jobs:
   build_and_test:
     name: Rust project
