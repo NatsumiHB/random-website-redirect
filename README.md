@@ -1,7 +1,9 @@
-# fun-stuff
+# random-website-redirect
 It's basically useless web but in cooler
 
 ## Usage
+- Add urls to the `urls.json` file, they are in the format KEY:VALUE
+
 Set the `RUST_LOG` environment variable to specify your
 [logging level](https://docs.rs/env_logger/0.7.1/env_logger/#enabling-logging).
 

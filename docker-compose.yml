@@ -2,11 +2,11 @@ version: "3"
 
 services:
     web-server:
-        image: natsuwumi/fun-stuff:latest
+        image: natsuwumi/random-website-redirect:latest
         environment:
           - RUST_LOG=info
         volumes:
-          - ./urls.json:/srv/fun-stuff/urls.json
+          - ./urls.json:/srv/random-website-redirect/urls.json
         networks:
           - proxy_net
 
