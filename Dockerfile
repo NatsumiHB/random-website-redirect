@@ -1,6 +1,6 @@
 FROM rust:1.45.2
 
-WORKDIR /srv/fun-stuff
+WORKDIR /srv/random-website-redirect
 COPY . .
 
 RUN cargo install --path .
