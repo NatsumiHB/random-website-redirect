@@ -4,8 +4,9 @@ use actix_web::{web, HttpServer, App, HttpResponse, get};
 use rand::seq::IteratorRandom;
 use actix_web::http::header::LOCATION;
 use actix_web::http::HeaderValue;
-use actix_web::web::Data;
+use actix_web::web::{Data, Json};
 use actix_web::middleware::Logger;
+use serde::Serialize;
 
 
 fn get_json(json_path: &str) -> anyhow::Result<HashMap<String, String>> {
@@ -14,7 +15,7 @@ fn get_json(json_path: &str) -> anyhow::Result<HashMap<String, String>> {
     Ok(serde_json::from_reader(file)?)
 }
 
-#[derive(Clone)]
+#[derive(Clone, Serialize)]
 struct Urls (HashMap<String, String>);
 
 #[actix_rt::main]
@@ -26,6 +27,7 @@ async fn main() -> anyhow::Result<()> {
     HttpServer::new(move || {
         App::new()
             .wrap(Logger::default())
+            .service(all_urls)
             .service(random)
             .service(choose)
             .data(urls.clone())
@@ -35,6 +37,11 @@ async fn main() -> anyhow::Result<()> {
         .await?;
 
     Ok(())
+}
+
+#[get("/all_urls")]
+async fn all_urls(urls: Data<Urls>) -> Json<Urls> {
+    Json(urls.as_ref().clone())
 }
 
 #[get("/")]
