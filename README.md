@@ -9,9 +9,13 @@ Set the `RUST_LOG` environment variable in `.env` to specify your
 
 You can either use Rust by just running `cargo run` in the root of the repository.
 
-When using the `docker-compose` file you will need to create a network called `proxy_net`.
+## Usage with Docker (`natsuwumi/random-website-redirect`)
+Set the same environment variable, you can also use a `.env` file (or use the premade one for the defaults) and specify that in your docker command 
+and also create a `urls.json` file.
 
-The server runs on port 5001, you will need to public that port in the `docker-compose.yml` file.
+The `urls.json` file must be bound to `/srv/random-website-redirect/urls.json` by using a volume in Docker.
+
+The server runs on port 5002, you will need to publish that port.
 
 | Endpoint   | Result                         |
 | :--------: | :----------------------------: |
