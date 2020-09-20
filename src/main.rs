@@ -20,7 +20,8 @@ struct Urls (HashMap<String, String>);
 
 #[actix_rt::main]
 async fn main() -> anyhow::Result<()> {
-    env_logger::init();
+    dotenv::dotenv().ok();
+    pretty_env_logger::init();
 
     let urls = Urls(get_json("./urls.json")?);
 
