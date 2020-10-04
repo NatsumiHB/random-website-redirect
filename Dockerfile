@@ -1,4 +1,4 @@
-FROM rust:1.46-alpine
+FROM rust:1.46-slim
 
 WORKDIR /srv/random-website-redirect
 COPY . .
