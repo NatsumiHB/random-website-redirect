@@ -19,8 +19,6 @@ jobs:
         uses: crazy-max/ghaction-docker-meta@v1
         with:
           images: natsuwumi/random-website-redirect
-          tag-sha: true
-          tag-match: \d{1,3}.
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
