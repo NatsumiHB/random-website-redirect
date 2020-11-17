@@ -35,5 +35,5 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            natsuwumi/these-waifus-also-dont-exist:latest
-            natsuwumi/these-waifus-also-dont-exist:${{ steps.previoustag.outputs.tag }}
+            natsuwumi/random-website-redirect:latest
+            natsuwumi/random-website-redirect:${{ steps.previoustag.outputs.tag }}
