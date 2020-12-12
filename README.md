@@ -17,8 +17,10 @@ The `urls.json` file must be bound to `/srv/random-website-redirect/urls.json` b
 
 The server runs on port 5002, you will need to publish that port.
 
-| Endpoint   | Result                         |
-| :--------: | :----------------------------: |
-| /          | Redirect to a random website   |
-| /\<url>    | Redirect to a specific website |
-| /all_urls  | JSON of all possible websites  |
+| Endpoint        | Result                         |
+| :-------------: | :----------------------------: |
+| /               | Redirect to a random website   |
+| /\<url>         | Redirect to a specific website |
+| /all_urls       | JSON of all possible websites  |
+| /get_json       | Get a random JSON              |
+| /get_json/\<id> | Get a specific JSON            |
