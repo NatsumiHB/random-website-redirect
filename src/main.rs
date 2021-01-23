@@ -61,7 +61,6 @@ async fn get_json(urls: Data<Urls>) -> Json<Url> {
         .choose(&mut rand::thread_rng())
         .unwrap();
 
-
     Json(Url {
         name: name.to_owned(),
         url: urls.as_ref().0.get(name.as_str()).unwrap().to_owned(),
