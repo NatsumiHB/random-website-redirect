@@ -2,7 +2,7 @@ name: Publish Docker image
 on:
   release:
     types:
-      - published
+      - released
 
 jobs:
   publish_image:
